@@ -96,7 +96,7 @@ function renderMarkdown(markdown: string): { html: string; toc: TocItem[] } {
     return `<h${depth} id="${id}">${inner}</h${depth}>`
   }
 
-  const rawHtml = marked.parse(markdown, { gfm: true, renderer }) as string
+  const rawHtml = marked.parse(markdown, { gfm: true, breaks: true, renderer }) as string
   const html = DOMPurify.sanitize(rawHtml)
   return { html, toc }
 }
