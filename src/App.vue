@@ -245,7 +245,7 @@ onMounted(() => {
           </div>
         </section>
 
-        <section class="sidebar-section">
+        <section class="sidebar-section post-list-section">
           <div class="section-title">日志目录（{{ filteredPosts.length }}）</div>
           <ul class="nav-list">
             <li v-for="post in filteredPosts" :key="post.slug">
